@@ -4,7 +4,7 @@
 #
 Name     : chardet
 Version  : 2.3.0
-Release  : 8
+Release  : 9
 URL      : https://pypi.python.org/packages/source/c/chardet/chardet-2.3.0.tar.gz
 Source0  : https://pypi.python.org/packages/source/c/chardet/chardet-2.3.0.tar.gz
 Summary  : Universal encoding detector for Python 2 and 3
