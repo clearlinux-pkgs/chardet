@@ -4,7 +4,7 @@
 #
 Name     : chardet
 Version  : 3.0.2
-Release  : 14
+Release  : 15
 URL      : http://pypi.debian.net/chardet/chardet-3.0.2.tar.gz
 Source0  : http://pypi.debian.net/chardet/chardet-3.0.2.tar.gz
 Summary  : Universal encoding detector for Python 2 and 3
