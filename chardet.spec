@@ -4,7 +4,7 @@
 #
 Name     : chardet
 Version  : 3.0.4
-Release  : 18
+Release  : 19
 URL      : http://pypi.debian.net/chardet/chardet-3.0.4.tar.gz
 Source0  : http://pypi.debian.net/chardet/chardet-3.0.4.tar.gz
 Summary  : Universal encoding detector for Python 2 and 3
@@ -12,6 +12,7 @@ Group    : Development/Tools
 License  : LGPL-2.1
 Requires: chardet-bin
 Requires: chardet-legacypython
+Requires: chardet-python3
 Requires: chardet-python
 BuildRequires : pbr
 BuildRequires : pip
@@ -42,9 +43,18 @@ legacypython components for the chardet package.
 Summary: python components for the chardet package.
 Group: Default
 Requires: chardet-legacypython
+Requires: chardet-python3
 
 %description python
 python components for the chardet package.
+
+
+%package python3
+Summary: python3 components for the chardet package.
+Group: Default
+
+%description python3
+python3 components for the chardet package.
 
 
 %prep
@@ -55,12 +65,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1504999997
+export SOURCE_DATE_EPOCH=1506868979
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1504999997
+export SOURCE_DATE_EPOCH=1506868979
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -80,5 +90,8 @@ echo ----[ mark ]----
 /usr/lib/python2*/*
 
 %files python
+%defattr(-,root,root,-)
+
+%files python3
 %defattr(-,root,root,-)
 /usr/lib/python3*/*
