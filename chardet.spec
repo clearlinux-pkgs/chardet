@@ -15,7 +15,7 @@ Requires: chardet-python3
 Requires: chardet-python
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : setuptools
 
