@@ -4,7 +4,7 @@
 #
 Name     : chardet
 Version  : 3.0.4
-Release  : 29
+Release  : 30
 URL      : http://pypi.debian.net/chardet/chardet-3.0.4.tar.gz
 Source0  : http://pypi.debian.net/chardet/chardet-3.0.4.tar.gz
 Summary  : Universal encoding detector for Python 2 and 3
@@ -12,12 +12,15 @@ Group    : Development/Tools
 License  : LGPL-2.1
 Requires: chardet-bin
 Requires: chardet-python3
+Requires: chardet-license
 Requires: chardet-python
 BuildRequires : pbr
 BuildRequires : pip
-
+BuildRequires : python-core
+BuildRequires : python3-core
 BuildRequires : python3-dev
 BuildRequires : setuptools
+BuildRequires : setuptools-legacypython
 
 %description
 --------------------------------------------------
@@ -25,6 +28,7 @@ BuildRequires : setuptools
 %package bin
 Summary: bin components for the chardet package.
 Group: Binaries
+Requires: chardet-license
 
 %description bin
 bin components for the chardet package.
@@ -37,6 +41,14 @@ Requires: python-core
 
 %description legacypython
 legacypython components for the chardet package.
+
+
+%package license
+Summary: license components for the chardet package.
+Group: Default
+
+%description license
+license components for the chardet package.
 
 
 %package python
@@ -65,13 +77,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1519338985
+export SOURCE_DATE_EPOCH=1530370720
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1519338985
+export SOURCE_DATE_EPOCH=1530370720
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/doc/chardet
+cp LICENSE %{buildroot}/usr/share/doc/chardet/LICENSE
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
 echo ----[ mark ]----
@@ -88,6 +102,10 @@ echo ----[ mark ]----
 %files legacypython
 %defattr(-,root,root,-)
 /usr/lib/python2*/*
+
+%files license
+%defattr(-,root,root,-)
+/usr/share/doc/chardet/LICENSE
 
 %files python
 %defattr(-,root,root,-)
