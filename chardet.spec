@@ -4,7 +4,7 @@
 #
 Name     : chardet
 Version  : 3.0.4
-Release  : 38
+Release  : 39
 URL      : http://pypi.debian.net/chardet/chardet-3.0.4.tar.gz
 Source0  : http://pypi.debian.net/chardet/chardet-3.0.4.tar.gz
 Summary  : Universal encoding detector for Python 2 and 3
@@ -63,7 +63,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554308825
+export SOURCE_DATE_EPOCH=1554311077
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
@@ -82,7 +82,7 @@ echo ----[ mark ]----
 
 %files bin
 %defattr(-,root,root,-)
-/usr/bin/chardetect
+%exclude /usr/bin/chardetect
 
 %files license
 %defattr(0644,root,root,0755)
