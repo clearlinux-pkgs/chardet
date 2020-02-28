@@ -1,2 +1,7 @@
 # This file contains recursive sources that require this package
 aiohttp
+conda
+docker-compose
+mercurial
+requests
+spyder-ide
