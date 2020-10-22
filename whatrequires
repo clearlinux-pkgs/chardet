@@ -1,7 +1,10 @@
 # This file contains recursive sources that require this package
+Cura
 aiohttp
 conda
 docker-compose
+html5lib
 mercurial
+pydot
 requests
 spyder-ide
