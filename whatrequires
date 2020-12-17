@@ -2,8 +2,10 @@
 Cura
 aiohttp
 conda
+cve-bin-tool
 docker-compose
 html5lib
+lutris
 mercurial
 pydot
 requests
