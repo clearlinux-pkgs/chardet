@@ -4,7 +4,7 @@
 #
 Name     : chardet
 Version  : 4.0.0
-Release  : 55
+Release  : 56
 URL      : https://files.pythonhosted.org/packages/ee/2d/9cdc2b527e127b4c9db64b86647d567985940ac3698eeabc7ffaccb4ea61/chardet-4.0.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ee/2d/9cdc2b527e127b4c9db64b86647d567985940ac3698eeabc7ffaccb4ea61/chardet-4.0.0.tar.gz
 Summary  : Universal encoding detector for Python 2 and 3
