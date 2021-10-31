@@ -1,6 +1,8 @@
 # This file contains recursive sources that require this package
 Cura
 aiohttp
+ansible
+binaryornot
 conda
 cve-bin-tool
 docker-compose
@@ -8,5 +10,5 @@ html5lib
 lutris
 mercurial
 pydot
-requests
 spyder-ide
+vpp
